@@ -1,0 +1,126 @@
+.howItWork {
+    padding: 100px 0;
+    background-color: var(--bg);
+    position: relative;
+
+    &:after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 403px;
+        height: 433px;
+        background-image: url("/icons/flower.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        left: 0;
+        bottom: 0;
+        transform: translate(-48%, 35%);
+    }
+}
+
+.howItWorkContent {
+
+}
+
+.title {
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 150%;
+    text-transform: uppercase;
+    font-family: var(--font-inter), sans-serif;
+    margin-bottom: 32px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto;
+    gap: 96px 24px;
+    position: relative;
+}
+
+.card {
+    position: relative;
+    padding: 36px 32px;
+    border-radius: 32px;
+    border: 2px solid var(--border);
+    background-color: #fff;
+
+    &:nth-child(4) { grid-column: 3; grid-row: 2; }
+    &:nth-child(5) { grid-column: 4; grid-row: 2; }
+
+    &:nth-child(1):after,
+    &:nth-child(2):after,
+    &:nth-child(3):after,
+    &:nth-child(4):after {
+        content: "";
+        display: block;
+        position: absolute;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        width: 239px;
+    }
+
+    &:nth-child(1):after {
+        background-image: url("/icons/arrow1.svg");
+        height: 49px;
+        bottom: -15px;
+        left: 65%;
+        transform: translateY(100%);
+    }
+
+    &:nth-child(2):after {
+        background-image: url("/icons/arrow2.svg");
+        height: 67px;
+        left: 65%;
+        top: -14px;
+        transform: translateY(-100%);
+    }
+
+    &:nth-child(3):after {
+        background-image: url("/icons/arrow3.svg");
+        width: 80px;
+        height: 239px;
+        right: -8px;
+        top: 50%;
+        transform: translateX(100%);
+    }
+
+    &:nth-child(4):after {
+        background-image: url("/icons/arrow4.svg");
+        height: 49px;
+        bottom: -15px;
+        left: 65%;
+        transform: translateY(100%);
+    }
+}
+
+.cardNumber {
+    color: var(--primary);
+    font-family: var(--font-kristi), sans-serif;
+    font-size: 70px;
+    font-weight: 400;
+    line-height: 70px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+.cardTitle {
+    font-family: var(--font-inter), sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 150%;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    color: var(--title);
+}
+
+.cardDescription {
+    color: var(--desctiption);
+    font-family: var(--font-inter), sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 150%;
+}

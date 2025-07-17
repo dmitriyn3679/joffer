@@ -1,0 +1,22 @@
+.join {
+    padding: 120px 48px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+    background-image:
+            linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+            url('/img/join-in-bg.jpg');}
+
+.joinWrapper {
+    width: 50%;
+}
+
+.title {
+    color: var(--bg);
+    font-family: var(--font-poppins), sans-serif;
+    font-size: 56px;
+    font-weight: 600;
+    line-height: 150%;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+}

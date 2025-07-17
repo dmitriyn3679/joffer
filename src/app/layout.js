@@ -1,14 +1,30 @@
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import {Inter, Kristi, Poppins} from "next/font/google";
+import Header from "@/components/Header/Header";
+import Footer from "@/components/Footer/Footer";
+import {ColorSchemeScript, MantineProvider} from "@mantine/core";
+import "../styles/globals.css";
+import '@mantine/core/styles.css';
+import {theme} from "@/utils/theme";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const poppins = Poppins({
+  subsets: ["latin", "latin-ext"],
+  weight: ["400", "600", "700"],
+  variable: "--font-poppins",
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const inter = Inter({
+  subsets: ["latin", "cyrillic"],
+  weight: ["400", "600"],
+  variable: "--font-inter",
+  display: "swap",
+});
+
+const kristi = Kristi({
   subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-kristi",
+  display: "swap",
 });
 
 export const metadata = {
@@ -19,8 +35,18 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
+      <head>
+        <ColorSchemeScript/>
+      </head>
+      <body className={`${poppins.variable} ${inter.variable} ${kristi.variable}`}>
+      <MantineProvider
+        defaultColorScheme="light"
+        theme={theme}
+      >
+        <Header />
+        <main>{children}</main>
+        <Footer />
+      </MantineProvider>
       </body>
     </html>
   );

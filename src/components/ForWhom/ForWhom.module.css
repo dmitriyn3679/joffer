@@ -1,0 +1,89 @@
+.for {
+    padding: 100px 0;
+    position: relative;
+    background-color: var(--bg);
+
+    &:after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 403px;
+        height: 433px;
+        background-image: url("/icons/flower.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        right: 0;
+        top: 0;
+        transform: translateX(30%);
+        z-index: 1;
+    }
+}
+
+.title {
+    font-family: var(--font-inter), sans-serif;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 150%;
+    text-transform: uppercase;
+    color: var(--heading);
+    margin-bottom: 32px;
+
+    & span {
+        display: inline-block;
+        position: relative;
+        margin-right: 24px;
+    }
+
+    & span:after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 152px;
+        height: 120px;
+        background-image: url("/icons/border.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        top: 50%;
+        left: 50%;
+        transform: translate(-52%, -43%);
+    }
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.card {
+    position: relative;
+    z-index: 2;
+    padding: 32px;
+    border-radius: 24px;
+    border: 1px solid var(--border);
+    background: #FFF;
+}
+
+.icon {
+    margin-bottom: 32px;
+}
+
+.cardTitle {
+    color: var(--title);
+    font-family: var(--font-inter), sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 150%;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+.cardDescription {
+    color: var(--desctiption);
+    font-family: var(--font-inter), sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 150%;
+}

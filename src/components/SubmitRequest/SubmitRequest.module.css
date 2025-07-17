@@ -1,0 +1,12 @@
+.submit {
+    width: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--light-text);
+    border-radius: 100000px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-family: var(--font-inter), sans-serif;
+}

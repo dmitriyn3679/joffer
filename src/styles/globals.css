@@ -1,0 +1,44 @@
+@import "./reset.css";
+
+:root {
+    --font-poppins: 'Poppins', sans-serif;
+    --font-inter: 'Inter', sans-serif;
+    --font-kristi: 'Kristi', sans-serif;
+    --primary: #4126F1;
+    --heading: #010101;
+    --title: #353535;
+    --desctiption: #484848;
+    --bg: #F7F7F9;
+    --light-text: #F5F3FF;
+    --border: #CFCFCF;
+}
+
+.button {
+    height: 100px;
+}
+
+html, body {
+    /*height: 100%;*/
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+
+}
+body {
+    font-family: var(--font-poppins);
+}
+
+a {
+    text-decoration: none;
+}
+
+main {
+    overflow: hidden;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-inter);
+}

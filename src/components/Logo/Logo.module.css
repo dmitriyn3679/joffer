@@ -1,0 +1,17 @@
+.logo {
+    position: relative;
+    font-family: var(--font-poppins), sans-serif;
+    text-transform: uppercase;
+    color: var(--heading);
+    font-weight: 700;
+    background-image: url("/icons/flower.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 103px;
+    height: 103px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    cursor: pointer;
+}
