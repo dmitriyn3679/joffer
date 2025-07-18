@@ -8,9 +8,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
-.nav {}
+.nav {
+    display: flex;
+}
 
 .navList {
     display: flex;
@@ -21,14 +24,54 @@
 .navItem a {
     font-family: var(--font-inter), sans-serif;
     font-size: 16px;
-    font-style: normal;
     font-weight: 400;
-    line-height: 100%;
     text-transform: uppercase;
     color: var(--heading);
     text-decoration: none;
+}
 
-    &:hover {
-        color: var(--primary);
+.navItem a:hover {
+    color: var(--primary);
+}
+
+.burger {
+    display: none;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .burger {
+        display: block;
+    }
+
+    .nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: white;
+        flex-direction: column;
+        padding: 16px;
+        transform: translateY(-20px);
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.3s ease;
+        z-index: 10;
+    }
+
+    .navOpened {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .navList {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .submitRequestWrapper {
+        display: none;
     }
 }

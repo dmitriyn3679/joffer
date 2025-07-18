@@ -10,7 +10,8 @@ export const Hero = () => {
         <Box className={classes.heroContent}>
           <Text className={classes.slogan}>Курси дають знання - ми даємо <span>досвід!</span></Text>
           <Stack className={classes.description}>
-            <Text>Ти пройшов курси — але без досвіду складно знайти першу роботу.
+            <Text>
+              Ти пройшов курси — але без досвіду складно знайти першу роботу.
               Ми допоможемо тобі перейти з навчання
               до справжньої командної роботи.
             </Text>
