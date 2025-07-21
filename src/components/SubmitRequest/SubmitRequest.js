@@ -5,7 +5,7 @@ import {Button} from "@mantine/core";
 
 export const SubmitRequest = () => {
   const handler = () => {
-    window.open('https://t.me/+1Ph25Y-d5m1mNmQ6', '_blank');
+    window.open(process.env.NEXT_PUBLIC_TG_BOT_URL, '_blank');
   };
   
   return (

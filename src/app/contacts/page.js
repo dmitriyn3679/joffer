@@ -1,4 +1,4 @@
-import {Box, Button, Group, Image, Input, SimpleGrid, Stack, Text, Textarea, TextInput} from "@mantine/core";
+import {Box, Button, Group, Image, SimpleGrid, Stack, Text, Textarea, TextInput} from "@mantine/core";
 import classes from "./contacts.module.css";
 import {Container} from "@/components/Container/Container";
 import {Social} from "@/components/Social/Social";
@@ -44,7 +44,7 @@ export default function ContactsPage() {
       <Container>
         <SimpleGrid className={classes.wrapper} cols={2}>
           <Box component="form"
-               action="https://formspree.io/f/mjkokjzg"
+               action="https://formspree.io/f/mdkdabvn"
                method="POST"
           >
             <Text className={classes.title}>Контакти</Text>
