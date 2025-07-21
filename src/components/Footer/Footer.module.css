@@ -106,4 +106,9 @@
             padding: 4px 0;
         }
     }
+
+    .footerCopyright p {
+        text-align: center !important;
+        margin-top: 8px;
+    }
 }
