@@ -95,7 +95,7 @@ export default function ContactsPage() {
           </Box>
           
           <Stack gap={24} className={classes.imgBox}>
-            <Image h="80%" radius="md" src="/img/contacts.png" />
+            <Image alt="contacts img" h="80%" radius="md" src="/img/contacts.png" />
             <Social names={true} />
           </Stack>
         </SimpleGrid>
