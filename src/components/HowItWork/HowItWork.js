@@ -12,7 +12,7 @@ const items = [
 
 export const HowItWork = () => {
   return (
-    <Box className={classes.howItWork}>
+    <Box id="how-it-work" className={classes.howItWork}>
       <Container>
         <Box className={classes.howItWorkContent}>
           <Text className={classes.title}>Як це працює?</Text>

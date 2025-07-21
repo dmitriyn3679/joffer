@@ -20,3 +20,40 @@
     text-transform: uppercase;
     margin-bottom: 32px;
 }
+
+@media (max-width: 1024px) {
+    .join {
+        padding: 100px 32px;
+    }
+
+    .joinWrapper {
+        width: 70%;
+    }
+
+    .title {
+        font-size: 42px;
+        margin-bottom: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .join {
+        padding: 48px 24px;
+    }
+
+    .joinWrapper {
+        width: 100%;
+    }
+
+    .title {
+        font-size: 28px;
+        text-align: left;
+        width: 50%;
+    }
+}
+
+@media (max-width: 500px) {
+    .title {
+        font-size: 22px;
+    }
+}

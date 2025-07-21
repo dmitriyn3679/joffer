@@ -1,14 +1,22 @@
+'use client'
+
 import {Container} from "@/components/Container/Container";
-import {Box} from "@mantine/core";
+import {Box, Text} from "@mantine/core";
 import {Logo} from "@/components/Logo/Logo";
 import {navItems} from "@/utils/navItems";
 import Link from "next/link";
 import classes from "./Footer.module.css";
-import { IconBrandInstagram } from '@tabler/icons-react';
-import { IconBrandTelegram } from '@tabler/icons-react';
-import { IconMail } from '@tabler/icons-react';
+import {Social} from "@/components/Social/Social";
+import {useScrollToSection} from "@/hooks/useScrollToSection";
 
 export default function Footer () {
+  const scrollToSection = useScrollToSection();
+  
+  const linkHandler = (e, link) => {
+    console.log(link);
+    if (!link.startsWith("/")) e.preventDefault();
+    scrollToSection(link);
+  };
   return (
     <footer className={classes.footer}>
       <Container>
@@ -18,16 +26,17 @@ export default function Footer () {
             <ul className={classes.navList}>
               {navItems.map(({link, title}) => (
                 <li key={link} className={classes.navItem}>
-                  <Link href={link}>{title}</Link>
+                  <Link onClick={(e) => linkHandler(e, link)} href={link}>{title}</Link>
                 </li>
               ))}
             </ul>
           </nav>
-          <Box className={classes.social}>
-            <Box><IconBrandInstagram /></Box>
-            <Box><IconBrandTelegram /></Box>
-            <Box><IconMail /></Box>
-          </Box>
+          <Social />
+        </Box>
+        <Box className={classes.footerCopyright}>
+          <Text size="sm" c="dimmed" ta="right">
+            © {new Date().getFullYear()} Joffer. Всі права захищені.
+          </Text>
         </Box>
       </Container>
     </footer>

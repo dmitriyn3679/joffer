@@ -15,12 +15,12 @@ const items = [
 
 export const ForWhom = () => {
   return (
-    <Box className={classes.for}>
+    <Box id="advantages" className={classes.for}>
       <Container>
         <Text className={classes.title}><span>Ми</span>   — це не про курси!</Text>
         <ul className={classes.cards}>
-          {items.map(({ icon, title, description }) => (
-            <li className={classes.card}>
+          {items.map(({ icon, title, description }, idx) => (
+            <li key={idx} className={classes.card}>
               <Box className={classes.icon}>{icon}</Box>
               <Text className={classes.cardTitle}>{title}</Text>
               <Text className={classes.cardDescription}>{description}</Text>

@@ -6,7 +6,7 @@ export const JoinIn = () => {
   return (
     <Box className={classes.join}>
       <Box className={classes.joinWrapper}>
-        <Text className={classes.title}>Готовий зробити свій перший крок у кар'єрі?</Text>
+        <Text className={classes.title}>Готовий зробити свій перший крок у кар&apos;єрі?</Text>
         <SubmitRequest />
       </Box>
     </Box>

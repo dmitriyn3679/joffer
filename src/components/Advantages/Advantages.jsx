@@ -16,12 +16,12 @@ const items = [
 
 export const Advantages = () => {
   return (
-    <Box className={classes.advantages}>
+    <Box id="for-whom" className={classes.advantages}>
       <Container>
         <Text className={classes.title}>Цей проєкт для тебе, якщо…</Text>
         <ul className={classes.cards}>
           {items.map(({ icon, title, description }) => (
-            <li className={classes.card}>
+            <li key={title} className={classes.card}>
               <Box className={classes.icon}>{icon}</Box>
               <Text className={classes.cardTitle}>{title}</Text>
               <Text className={classes.cardDescription}>{description}</Text>
